@@ -20,7 +20,7 @@ if($num_rows == 0){
     $response["response"] = "Logged in";
     $response["user_id"] = $id;
 }
-$json = Null;
+$json = NULL;
 $json == json_encode($response);
 echo $json;
 ?>

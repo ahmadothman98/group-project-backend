@@ -11,8 +11,8 @@ if($choice_gender == 0){
     $gender = "Female";
 }
 $number = rand();
-$query = $mysqli->prepare("INSERT INTO users(User_email, username, User_password) VALUES (?, ?, ?)");
-$query->bind_param("sss", $email,$username,$password);
+$query = $mysqli->prepare("INSERT INTO users(User_email, f_name, User_password) VALUES (?, ?, ?)");
+$query->bind_param("sss", $email, $username, $password);
 $query->execute();
 
 $result = [];
@@ -20,9 +20,5 @@ $result = [];
 $result ["success"] = true;
 
 echo json_encode($result);
-
-//$query = $mysqli->prepare("SELECT ID FROM USERS WHERE EMAIL = ? AND PASSWORD = ?");
-// $query->bind_param("ss", $email, $password, $Date_of_birth,$choice_gender);
-
 
 ?>
