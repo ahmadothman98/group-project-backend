@@ -21,7 +21,7 @@ $response = [];
 $response["success"] = true;
 
 function encodeImage($image){
-    $path = "C:\\xampp\\htdocs\\assets\\".$image;
+    $path = "localhost/Zomato/assets/".$image;
     echo($path);
     $type = pathinfo($path, PATHINFO_EXTENSION);
     $data = file_get_contents($path);

@@ -11,8 +11,8 @@ if($choice_gender == 0){
     $gender = "Female";
 }
 $number = rand();
-$query = $mysqli->prepare("INSERT INTO users(User_email, username, User_Lname, User_password) VALUES (?, ?, ?, ?)");
-$query->bind_param("ssss", $email,$username,$last_name,$password);
+$query = $mysqli->prepare("INSERT INTO users(User_email, username, User_password) VALUES (?, ?, ?)");
+$query->bind_param("sss", $email,$username,$password);
 $query->execute();
 
 $result = [];
